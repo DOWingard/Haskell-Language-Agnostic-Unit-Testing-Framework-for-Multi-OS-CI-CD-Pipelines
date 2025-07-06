@@ -1,0 +1,17 @@
+- name: Addition test
+  command: "./fake_test/cpp/cppfaketest.exe"
+  input: "add 2 3"
+  expected_output: "5\n"
+  result: false
+
+- name: Palindrome test
+  command: "./fake_test/cpp/cppfaketest.exe"
+  input: "palindrome racecar"
+  expected_output: "true\n"
+  result: false
+
+- name: Factorial test
+  command: "./fake_test/cpp/cppfaketest.exe"
+  input: "factorial 5"
+  expected_output: "120\n"
+  result: false

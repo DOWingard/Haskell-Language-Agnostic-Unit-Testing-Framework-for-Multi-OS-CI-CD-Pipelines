@@ -1,0 +1,72 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           Testbed
+version:        0.1.0.0
+author:         Derek Wingard
+maintainer:     dwingard@uw.edu
+build-type:     Simple
+
+library
+  other-modules:
+      Paths_Testbed
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , async
+    , base
+    , bytestring
+    , filepath
+    , process
+    , split
+    , text
+    , time
+    , yaml
+  default-language: Haskell2010
+
+executable htest
+  main-is: testbed.hs
+  other-modules:
+      Paths_Testbed
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      aeson
+    , async
+    , base
+    , bytestring
+    , filepath
+    , process
+    , split
+    , text
+    , time
+    , yaml
+  default-language: Haskell2010
+
+test-suite testbed-test
+  type: exitcode-stdio-1.0
+  main-is: testbed.hs
+  other-modules:
+      Paths_Testbed
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , async
+    , base >=4.7 && <5
+    , bytestring
+    , filepath
+    , hspec
+    , hspec-discover
+    , process
+    , split
+    , testbed
+    , text
+    , time
+    , yaml
+  default-language: Haskell2010

@@ -1,0 +1,59 @@
+
+name: Testbed
+version: 0.1.0.0
+author: "Derek Wingard"
+maintainer: "dwingard@uw.edu"
+
+
+dependencies:
+  - base >= 4.7 && < 5
+  - process
+  - bytestring
+  - text
+  - yaml
+  - aeson
+  - async
+  - filepath
+  - time
+  - split            
+
+library:
+  source-dirs: src
+  dependencies:
+    - base
+    - process
+    - bytestring
+    - text
+    - yaml
+    - aeson
+    - async
+    - filepath
+    - time
+    - split         
+
+executables:
+  htest:
+    main:                testbed.hs
+    source-dirs:         src
+    ghc-options:         -Wall
+    dependencies:
+      - base
+      - process
+      - bytestring
+      - text
+      - yaml
+      - aeson
+      - async
+      - filepath
+      - time
+      - split         
+
+tests:
+  testbed-test:
+    main: testbed.hs
+    source-dirs: src
+    dependencies:
+      - testbed
+      - hspec
+      - hspec-discover
+      - split          

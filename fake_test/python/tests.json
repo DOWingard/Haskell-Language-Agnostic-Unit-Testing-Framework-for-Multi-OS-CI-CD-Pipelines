@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Linear function test",
+    "command": "python fake_test/python/pythonfaketest.py TEST_linear",
+    "input": "2",
+    "expected_output": "8\n",
+    "result": false
+  },
+  {
+    "name": "Vector rotation test",
+    "command": "python fake_test/python/pythonfaketest.py TEST_rotate_vector",
+    "input": "1 0 1.570796",
+    "expected_output": "0.0 1.0\n",
+    "result": false
+  },
+  {
+    "name": "Valid user test",
+    "command": "python fake_test/python/pythonfaketest.py TEST_is_valid_user",
+    "input": "{\"name\": \"Alice\", \"age\": 30}",
+    "expected_output": "True\n",
+    "result": false
+  }
+]
