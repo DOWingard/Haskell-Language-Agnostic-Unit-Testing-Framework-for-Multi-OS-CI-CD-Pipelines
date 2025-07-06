@@ -38,7 +38,7 @@ instance ToJSON TestCase
 normalize :: String -> String
 normalize = filter (/= '\r')
 
--- Normalizes path for Windows, leaves it alone for Unix/macOS
+-- Normalizes path for Windows
 normalizeCommand :: String -> String
 normalizeCommand cmd
   | os == "mingw32" = 
@@ -48,10 +48,6 @@ normalizeCommand cmd
   where
     slashToBackslash '/' = '\\'
     slashToBackslash c   = c
----------------------------------------------------------------------------------
---- Test Procedure --------------------------------------------------------------
----------------------------------------------------------------------------------
-
 ---------------------------------------------------------------------------------
 --- Test Procedure --------------------------------------------------------------
 ---------------------------------------------------------------------------------
@@ -69,8 +65,6 @@ runTest (TestCase name cmd input expected _ _ _ _) = do
   exitCode <- waitForProcess ph  
 
   let passed = exitCode == ExitSuccess && normalize output == normalize expected  -- pass/fail handling
-
-  -- prints results 
   if passed
     then do
       putStrLn $ name ++ ": PASS"
