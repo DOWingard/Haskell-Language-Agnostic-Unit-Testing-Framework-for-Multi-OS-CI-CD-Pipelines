@@ -19,7 +19,7 @@ import Data.Time (getCurrentTime, diffUTCTime)
 import Data.List (dropWhileEnd, isPrefixOf,intercalate)
 import Data.Char (isSpace)                           -- for better trim
 
--- Generic type derivation allows
+
 -- Test data type  
 data TestCase = TestCase
   { name            :: String  
