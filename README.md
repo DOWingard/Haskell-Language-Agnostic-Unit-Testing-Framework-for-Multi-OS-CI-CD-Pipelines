@@ -75,7 +75,7 @@ htest fake_test/python/tests.json
 ```
 C++:
 ```bash
-htest fake_test/cpp/tests.json
+htest fake_test/cpp/tests.yaml
 ```
 
 
