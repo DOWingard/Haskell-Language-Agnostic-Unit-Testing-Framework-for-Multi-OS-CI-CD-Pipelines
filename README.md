@@ -34,7 +34,7 @@ Upon execution of ```stack build```, the following depencies will be installed t
   - filepath
   - time 
 
-If this is your first time compiling Haskell, this download may take awhile, a
+If this is your first time compiling Haskell, this download may take awhile
 ## Installation
 To run this in your environment:
 
