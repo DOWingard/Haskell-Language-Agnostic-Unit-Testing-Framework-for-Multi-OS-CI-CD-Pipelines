@@ -50,7 +50,7 @@ Then, install the executable so it is available in any directory:
 stack install
 ```
 ## Uninstalling
-If you want to remove the executable, Haskell does not have uninstall functionality, but you can locate the location with:
+If you want to remove the executable, Haskell does not have uninstall functionality, but you can locate the destination with:
 ```bash
 stack path --local-bin
 ```
